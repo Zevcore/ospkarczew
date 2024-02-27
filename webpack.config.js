@@ -21,6 +21,8 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app_js', './assets/app.js')
+    .addEntry('swiper', './assets/scripts/swiper.js')
+
     .addEntry('app_css', './assets/styles/app.scss')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
