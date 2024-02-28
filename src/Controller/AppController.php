@@ -12,7 +12,12 @@ class AppController extends AbstractController
     #[Route("/", name: "app_index")]
     public function index(): Response
     {
-        return $this->render('app/app.html.twig');
+        $postsUrl = realpath(__DIR__ . '/../../data/posts.json');
+        $facebookData = json_decode(file_get_contents($postsUrl), true);
+
+        return $this->render('app/app.html.twig',[
+            'facebookData' => $facebookData
+        ]);
     }
 
 }

@@ -1,0 +1,27 @@
+.join {
+  margin: 50px 0 0 0;
+  width: 100%;
+  background-color: #007bff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+
+  p {
+    font-size: 3.5rem;
+    color: white;
+  }
+
+  a {
+    background-color: #7fbafa;
+    color: white;
+    font-size: 2rem;
+    padding: 20px 30px;
+    border-radius: 15px;
+    transition: .2s ease all;
+
+    &:hover {
+      background-color: #092c52;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.history {
+  width: 100%;
+  background-color: #e6e6e6;
+  padding: 50px 0;
+
+  .container {
+    width: 80vw;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+      padding: 10px 0;
+    }
+
+    p {
+      font-size: 1.7rem;
+      max-width: 40vw;
+    }
+
+    a {
+      margin: 15px 0 0 0;
+      display: block;
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      background-color: #007bff;
+      color: white;
+      width: 200px;
+      text-align: center;
+      border-radius: 15px;
+      transition: .2s ease all;
+
+      &:hover {
+        background-color: #7fbafa;
+      }
+    }
+  }
+}

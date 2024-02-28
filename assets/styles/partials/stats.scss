@@ -1,0 +1,31 @@
+.stats {
+  width: 80vw;
+  margin: 50px auto;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    div {
+      margin: 20px 0;
+      text-align: center;
+      p.type {
+        font-size: 1.7rem;
+        margin-top: 10px;
+      }
+      p.count {
+        font-size: 3rem;
+        color: #007bff;
+        i {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

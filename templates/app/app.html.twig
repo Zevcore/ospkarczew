@@ -19,4 +19,65 @@
             <h3>w Karczewie</h3>
         </div>
     </div>
+
+    <section class="events">
+        {% if facebookData is defined %}
+            <h2><i class="ri-fire-line"></i> Ostatnie wpisy</h2>
+            <ul>
+                {% for article in facebookData %}
+                    <li class="event-item">
+                        <img src="{{ article.full_picture }}" alt="{{ article.id }}" class="event-image">
+                        <div class="event-content">
+                            {% if article.message is defined %}
+                                <h3 class="event-title">{{ article['message'] }}</h3>
+                            {% endif %}
+                            <time class="event-date">Dodano: {{ article.created_time|date('d/m/Y') }}</time>
+                            <a href="{{ article.permalink_url }}" target="_blank" class="event-link">Czytaj więcej</a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+
+    <section class="join">
+        <p>Chcesz zostać strażakiem?</p>
+        <a href="/">Dołącz do nas!</a>
+    </section>
+
+    <section class="history">
+        <div class="container">
+            <div class="description">
+                <h3>Historia</h3>
+                <h2>Ochotnicza Straż Pożarna w Karczewie</h2>
+                <p>Wyrażenie "straż pożarna" nieodłącznie kojarzy się z pożarem – zjawiskiem niekontrolowanego rozprzestrzeniania ognia, które stanowi zagrożenie dla życia ludzkiego oraz mienia. Ogień, będący fundamentem rozwoju cywilizacji ludzkiej, jednocześnie wzbudza strach jako niepohamowana siła zdolna do niszczenia dorobku ludzkości zarówno w czasach pokoju, jak i wojny. Dążenie do opanowania tego straszliwego elementu stanowiło kluczowy aspekt postępu kulturowego ludzkości, co świadczy o wielowiekowej historii walki z ogniem.</p>
+                <a href="/">Czytaj więcej</a>
+            </div>
+            <img src="https://karczew.pl/asp/galeria/gmina_karczew_na_starej_fotografii_architektura/2.budynek_osp__1932.png" alt="historia osp karczew">
+        </div>
+    </section>
+
+    <section class="stats">
+        <h2>Statystyka 2023</h2>
+        <div class="container">
+            <div>
+                <p class="count"><i class="ri-fire-line"></i> 123</p>
+                <p class="type">Pożary</p>
+            </div>
+            <div>
+                <p class="count"><i class="ri-bus-fill"></i> 123</p>
+                <p class="type">Miejscowe zagrożenia</p>
+            </div>
+            <div>
+                <p class="count"><i class="ri-error-warning-line"></i> 123</p>
+                <p class="type">Alarmy fałszywe</p>
+            </div>
+            <div>
+                <p class="count"><i class="ri-bubble-chart-line"></i> 123</p>
+                <p class="type">Razem</p>
+            </div>
+        </div>
+    </section>
+
+
 {% endblock %}
